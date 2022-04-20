@@ -1,16 +1,17 @@
 name,ring,quadrant,isNew,description
-Monolith,Hold,Techniques,TRUE,
-Microservices,Trial,Techniques,TRUE,
-Domain Driven Design,Adopt,Techniques,TRUE,
-CircleCI,Adopt,Platforms,TRUE,
-GitHub Actions,Assess,Platforms,TRUE,
-GitHub,Adopt,Platforms,TRUE,
-Figma,Adopt,Tools,TRUE,
-IntelliJ 2021,Adopt,Tools,TRUE,
-Visual Studio Code,Adopt,Tools,TRUE,
-IntelliJ 2022,Adopt,Tools,TRUE,
-Java17,Adopt,languages-and-frameworks,TRUE,
-Go,Trial,languages-and-frameworks,TRUE,
-Terraform,Assess,languages-and-frameworks,TRUE,
-Java8,Hold,languages-and-frameworks,TRUE,
-React,Adopt,languages-and-frameworks,TRUE,
+Domain Driven Design,Adopt,Techniques,TRUE,TBD
+Microservices,Trial,Techniques,TRUE,TBD
+DevOps,Assess,Techniques,TRUE,TBD
+Monolith,Hold,Techniques,TRUE,TBD
+CircleCI,Adopt,Platforms,TRUE,TBD
+GitHub Actions,Assess,Platforms,TRUE,TBD
+GitHub,Adopt,Platforms,TRUE,TBD
+Figma,Adopt,Tools,TRUE,TBD
+IntelliJ 2021,Adopt,Tools,TRUE,TBD
+Visual Studio Code,Adopt,Tools,TRUE,TBD
+IntelliJ 2022,Adopt,Tools,TRUE,TBD
+Java17,Adopt,languages-and-frameworks,TRUE,TBD
+Go,Trial,languages-and-frameworks,TRUE,TBD
+Terraform,Assess,languages-and-frameworks,TRUE,TBD
+Java8,Hold,languages-and-frameworks,TRUE,TBD
+React,Adopt,languages-and-frameworks,TRUE,TBD
