@@ -3,20 +3,31 @@ Domain Driven Design,Adopt,Techniques,TRUE,TBD
 Microservices,Trial,Techniques,TRUE,TBD
 DevOps,Assess,Techniques,TRUE,TBD
 Monolith,Hold,Techniques,TRUE,TBD
-CircleCI,Adopt,Platforms,TRUE,TBD
-GitHub,Adopt,Platforms,TRUE,TBD
-GitHub Actions,Assess,Platforms,TRUE,TBD
+Session-based authentication,Hold,Techniques,TRUE,TBD
+Token-basd authentication,Hold,Techniques,TRUE,TBD
+CircleCI,Adopt,Platforms,TRUE,Our current CI/CD provider: https://app.circleci.com/projects/project-dashboard/github/corporater/
+GitHub,Adopt,Platforms,TRUE,All our code lives here: https://github.com/corporater
+GitHub Actions,Assess,Platforms,TRUE,"Most of our automation needs are currently covered by CircleCI, but we see that GitHub Actions has good traction and might provide a good alternative for some use-cases. Killer use-case(s) and a strategy for dealing with the complexity/fragmentation that may arise from splitting efforts between GA and CircleCI needed!"
 DockerHub,Assess,Platforms,TRUE,"We are currently using DockerHub as our main container repository, however, there might be benefits from switching to AWS ECR, this is currently being investigated"
 AWS ECR,Trial,Platforms,TRUE,Continuous builds are pushed here as it is easier to integrate with our IAC efforts
 VeraCode,Adopt,Platforms,TRUE,"We want BMP to have a VeraCode stamp of approval for security. This certificate is important for many clients. All builds are uploaded to VeraCode and subjected to static scan, we also get manual penetration tests"
 AWS S3,Adopt,Platforms,TRUE,Build artifacts are published/stored here. We should consider if we can make this replace ShareFile alltogether
+JFrog,Adopt,Platforms,TRUE,Package repository. Intermediary artifacts are uploaded here and used during build process. https://corporater.jfrog.io/ui/packages
+Prometheus,Adopt,Platforms,TRUE,TBD
+Grafana,Trial,Platforms,TRUE,TBD
 Figma,Adopt,Tools,TRUE,Chosen as our main tool for wireframing/prototyping and shared whiteboard
 IntelliJ 2021,Adopt,Tools,TRUE,"Still being widely used, but we would suggest upgrading to 2022"
 Visual Studio Code,Adopt,Tools,TRUE,TBD
 IntelliJ 2022,Adopt,Tools,TRUE,Latest and greatest IntelliJ. Featuring a splash-screen that does not cause seizures
 Maven,Adopt,Tools,TRUE,Our build tool. Used locally and by CircleCI
+JProfiler,Assess,Tools,TRUE,"We only have a single license for this, which, coupled with a slightly convoluted workflow, means we might not be profiling as much as we should. Are there other options?"
+Cypress,Adopt,Tools,TRUE,E2E-testing platform. Can be run locally and is used by CircleCI
+Install4j,Hold,Tools,TRUE,
 Java17,Adopt,languages-and-frameworks,TRUE,We are currently in the process of migrating to this
 Go,Trial,languages-and-frameworks,TRUE,TBD
 Terraform,Assess,languages-and-frameworks,TRUE,TBD
 Java8,Hold,languages-and-frameworks,TRUE,"Any new services/libraries/repos should not use this, though we have not taken the plunge for bmp.bmp yet"
 React,Adopt,languages-and-frameworks,TRUE,Our primary front-end framework
+Spring,Adopt,languages-and-frameworks,TRUE,New services should be based on spring-boot
+ag-grid,Adopt,languages-and-frameworks,TRUE,Front-end tables
+Apollo-client,Adopt,languages-and-frameworks,TRUE,Front-end graphql client
