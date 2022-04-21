@@ -4,14 +4,19 @@ Microservices,Trial,Techniques,TRUE,TBD
 DevOps,Assess,Techniques,TRUE,TBD
 Monolith,Hold,Techniques,TRUE,TBD
 CircleCI,Adopt,Platforms,TRUE,TBD
-GitHub Actions,Assess,Platforms,TRUE,TBD
 GitHub,Adopt,Platforms,TRUE,TBD
-Figma,Adopt,Tools,TRUE,TBD
-IntelliJ 2021,Adopt,Tools,TRUE,TBD
+GitHub Actions,Assess,Platforms,TRUE,TBD
+DockerHub,Assess,Platforms,TRUE,"We are currently using DockerHub as our main container repository, however, there might be benefits from switching to AWS ECR, this is currently being investigated"
+AWS ECR,Trial,Platforms,TRUE,Continuous builds are pushed here as it is easier to integrate with our IAC efforts
+VeraCode,Adopt,Platforms,TRUE,"We want BMP to have a VeraCode stamp of approval for security. This certificate is important for many clients. All builds are uploaded to VeraCode and subjected to static scan, we also get manual penetration tests"
+AWS S3,Adopt,Platforms,TRUE,Build artifacts are published/stored here. We should consider if we can make this replace ShareFile alltogether
+Figma,Adopt,Tools,TRUE,Chosen as our main tool for wireframing/prototyping and shared whiteboard
+IntelliJ 2021,Adopt,Tools,TRUE,"Still being widely used, but we would suggest upgrading to 2022"
 Visual Studio Code,Adopt,Tools,TRUE,TBD
-IntelliJ 2022,Adopt,Tools,TRUE,TBD
-Java17,Adopt,languages-and-frameworks,TRUE,TBD
+IntelliJ 2022,Adopt,Tools,TRUE,Latest and greatest IntelliJ. Featuring a splash-screen that does not cause seizures
+Maven,Adopt,Tools,TRUE,Our build tool. Used locally and by CircleCI
+Java17,Adopt,languages-and-frameworks,TRUE,We are currently in the process of migrating to this
 Go,Trial,languages-and-frameworks,TRUE,TBD
 Terraform,Assess,languages-and-frameworks,TRUE,TBD
-Java8,Hold,languages-and-frameworks,TRUE,TBD
-React,Adopt,languages-and-frameworks,TRUE,TBD
+Java8,Hold,languages-and-frameworks,TRUE,"Any new services/libraries/repos should not use this, though we have not taken the plunge for bmp.bmp yet"
+React,Adopt,languages-and-frameworks,TRUE,Our primary front-end framework
