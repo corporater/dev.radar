@@ -2,19 +2,22 @@ name,ring,quadrant,isNew,description
 Domain Driven Design,Adopt,Techniques,TRUE,TBD
 Microservices,Trial,Techniques,TRUE,TBD
 DevOps,Assess,Techniques,TRUE,TBD
-Monolith,Hold,Techniques,TRUE,TBD
+Monolith,Hold,Techniques,TRUE,"By placing this here we want to indicate that one should take great care to not lump further new features into our existing monolith. New services may still choose to adopt a ""monolith first"" approach as they will presumably still be of a far smaller scope than BMP itself"
 Session-based authentication,Hold,Techniques,TRUE,TBD
-Token-basd authentication,Hold,Techniques,TRUE,TBD
+Token-based authentication,Trial,Techniques,TRUE,TBD
+IAC,Trial,Techniques,TRUE,"Infrastructure as code. As we move towards a multi-service architecture, we will need to become proficient in this area to avoid brittle deployments and unicorn servers"
+The twelve factor app,Adopt,Techniques,TRUE,https://12factor.net/
 CircleCI,Adopt,Platforms,TRUE,Our current CI/CD provider: https://app.circleci.com/projects/project-dashboard/github/corporater/
 GitHub,Adopt,Platforms,TRUE,All our code lives here: https://github.com/corporater
 GitHub Actions,Assess,Platforms,TRUE,"Most of our automation needs are currently covered by CircleCI, but we see that GitHub Actions has good traction and might provide a good alternative for some use-cases. Killer use-case(s) and a strategy for dealing with the complexity/fragmentation that may arise from splitting efforts between GA and CircleCI needed!"
 DockerHub,Assess,Platforms,TRUE,"We are currently using DockerHub as our main container repository, however, there might be benefits from switching to AWS ECR, this is currently being investigated"
 AWS ECR,Trial,Platforms,TRUE,Continuous builds are pushed here as it is easier to integrate with our IAC efforts
 VeraCode,Adopt,Platforms,TRUE,"We want BMP to have a VeraCode stamp of approval for security. This certificate is important for many clients. All builds are uploaded to VeraCode and subjected to static scan, we also get manual penetration tests"
-AWS S3,Adopt,Platforms,TRUE,Build artifacts are published/stored here. We should consider if we can make this replace ShareFile alltogether
+AWS S3,Adopt,Platforms,TRUE,"Build artifacts (installers, tar'ed images) are published/stored here. We should consider if we can make this replace ShareFile alltogether"
 JFrog,Adopt,Platforms,TRUE,Package repository. Intermediary artifacts are uploaded here and used during build process. https://corporater.jfrog.io/ui/packages
-Prometheus,Adopt,Platforms,TRUE,TBD
-Grafana,Trial,Platforms,TRUE,TBD
+Camunda,Adopt,Platforms,TRUE,The engine that powers our process management offering
+Prometheus,Adopt,Tools,TRUE,TBD
+Grafana,Trial,Tools,TRUE,TBD
 Figma,Adopt,Tools,TRUE,Chosen as our main tool for wireframing/prototyping and shared whiteboard
 IntelliJ 2021,Adopt,Tools,TRUE,"Still being widely used, but we would suggest upgrading to 2022"
 Visual Studio Code,Adopt,Tools,TRUE,TBD
@@ -22,12 +25,15 @@ IntelliJ 2022,Adopt,Tools,TRUE,Latest and greatest IntelliJ. Featuring a splash-
 Maven,Adopt,Tools,TRUE,Our build tool. Used locally and by CircleCI
 JProfiler,Assess,Tools,TRUE,"We only have a single license for this, which, coupled with a slightly convoluted workflow, means we might not be profiling as much as we should. Are there other options?"
 Cypress,Adopt,Tools,TRUE,E2E-testing platform. Can be run locally and is used by CircleCI
-Install4j,Hold,Tools,TRUE,
+Install4j,Hold,Tools,TRUE,Install4j solves many of the same challenges as docker/containers. Our cloud-first strategy means that we should probably put greater emphasis on how we run our services in containers and less on how they are deployed on prem
+Snyk,Trial,Tools,TRUE,Container images are currently scanned for library-vulnerabilites using Snyk
+Docker,Adopt,Tools,TRUE,Our preferred container technology. All services should produce images as part of their build workflow
 Java17,Adopt,languages-and-frameworks,TRUE,We are currently in the process of migrating to this
 Go,Trial,languages-and-frameworks,TRUE,TBD
-Terraform,Assess,languages-and-frameworks,TRUE,TBD
+Terraform,Adopt,languages-and-frameworks,TRUE,TBD
 Java8,Hold,languages-and-frameworks,TRUE,"Any new services/libraries/repos should not use this, though we have not taken the plunge for bmp.bmp yet"
 React,Adopt,languages-and-frameworks,TRUE,Our primary front-end framework
-Spring,Adopt,languages-and-frameworks,TRUE,New services should be based on spring-boot
-ag-grid,Adopt,languages-and-frameworks,TRUE,Front-end tables
+Spring,Adopt,languages-and-frameworks,TRUE,"New services should be based on spring-boot. We are aware that the framework comes with a fair bit of overhead in terms of complexity and weight of JAR-files, but we feel that the gains in terms of utility, push towards good code practices and possibility of unification/streamlining between services is well worth it"
+ag-grid,Adopt,languages-and-frameworks,TRUE,Front-end tables. Widely used in BMP. Due to license cost and complexity may not be suitable for small use-cases in other products/services
 Apollo-client,Adopt,languages-and-frameworks,TRUE,Front-end graphql client
+JUL,Adopt,languages-and-frameworks,TRUE,BMP uses JUL for logging. Other services use JUL over SLF4J
