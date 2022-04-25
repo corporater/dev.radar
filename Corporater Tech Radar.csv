@@ -5,7 +5,7 @@ DevOps,Assess,Techniques,TRUE,"Remove silos and break down barriers between Deve
 Monolith,Hold,Techniques,TRUE,"By placing this here we want to indicate that one should take great care to not lump further new features into our existing monolith. New services may still choose to adopt a ""monolith first"" approach as they will presumably still be of a far smaller scope than BMP itself"
 Session-based authentication,Hold,Techniques,TRUE,This is how authentication is handled between the browser and BMP-backend today
 Token-based authentication,Trial,Techniques,TRUE,"When more than one service is used to power the client, session based authentication becomes cumbersome. We want to migrate to a fully token-based strategy where tokens are issued centrally and can be verified locally by each service"
-IAC,Trial,Techniques,TRUE,"Infrastructure as code. As we move towards a multi-service architecture, we will need to become proficient in this area to avoid brittle deployments and unicorn servers"
+IAC,Trial,Techniques,TRUE,"Infrastructure as code. As we move towards a multi-service architecture, we will need to become proficient in this area to avoid brittle deployments and unicorn servers. Currently spearheaded by the CDE-team an their iac.admin effort"
 The twelve factor app,Adopt,Techniques,TRUE,https://12factor.net/
 CircleCI,Adopt,Platforms,TRUE,Our current CI/CD provider: https://app.circleci.com/projects/project-dashboard/github/corporater/
 GitHub,Adopt,Platforms,TRUE,All our code lives here: https://github.com/corporater
