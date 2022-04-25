@@ -3,8 +3,8 @@ Domain Driven Design,Adopt,Techniques,TRUE,TBD
 Microservices,Trial,Techniques,TRUE,TBD
 DevOps,Assess,Techniques,TRUE,TBD
 Monolith,Hold,Techniques,TRUE,"By placing this here we want to indicate that one should take great care to not lump further new features into our existing monolith. New services may still choose to adopt a ""monolith first"" approach as they will presumably still be of a far smaller scope than BMP itself"
-Session-based authentication,Hold,Techniques,TRUE,TBD
-Token-based authentication,Trial,Techniques,TRUE,TBD
+Session-based authentication,Hold,Techniques,TRUE,This is how authentication is handled between the browser and BMP-backend today
+Token-based authentication,Trial,Techniques,TRUE,"When more than one service is used to power the client, session based authentication becomes cumbersome. We want to migrate to a fully token-based strategy where tokens are issued centrally and can be verified locally by each service"
 IAC,Trial,Techniques,TRUE,"Infrastructure as code. As we move towards a multi-service architecture, we will need to become proficient in this area to avoid brittle deployments and unicorn servers"
 The twelve factor app,Adopt,Techniques,TRUE,https://12factor.net/
 CircleCI,Adopt,Platforms,TRUE,Our current CI/CD provider: https://app.circleci.com/projects/project-dashboard/github/corporater/
@@ -15,9 +15,9 @@ AWS ECR,Trial,Platforms,TRUE,Continuous builds are pushed here as it is easier t
 VeraCode,Adopt,Platforms,TRUE,"We want BMP to have a VeraCode stamp of approval for security. This certificate is important for many clients. All builds are uploaded to VeraCode and subjected to static scan, we also get manual penetration tests"
 AWS S3,Adopt,Platforms,TRUE,"Build artifacts (installers, tar'ed images) are published/stored here. We should consider if we can make this replace ShareFile alltogether"
 JFrog,Adopt,Platforms,TRUE,Package repository. Intermediary artifacts are uploaded here and used during build process. https://corporater.jfrog.io/ui/packages
-Camunda,Adopt,Platforms,TRUE,The engine that powers our process management offering
-Prometheus,Adopt,Tools,TRUE,TBD
-Grafana,Trial,Tools,TRUE,TBD
+Camunda,Adopt,Platforms,TRUE,"The engine that powers our process management offering. Currently embedded in the BMP VM, but a prime candidate for deployment as a separate service"
+Prometheus,Adopt,Tools,TRUE,"Exposes metrics from BMP as a standard REST endpoint. Other services should use this as well, though the usage-scope is not defined and is left up to each team"
+Grafana,Trial,Tools,TRUE,"Visualize metrics as dashboards. Used by Saas/Service&Support. They have constructed a ""standard"" dashboard for BMP, but Grafana itself is highly configurable"
 Figma,Adopt,Tools,TRUE,Chosen as our main tool for wireframing/prototyping and shared whiteboard
 IntelliJ 2021,Adopt,Tools,TRUE,"Still being widely used, but we would suggest upgrading to 2022"
 Visual Studio Code,Adopt,Tools,TRUE,TBD
@@ -28,12 +28,12 @@ Cypress,Adopt,Tools,TRUE,E2E-testing platform. Can be run locally and is used by
 Install4j,Hold,Tools,TRUE,Install4j solves many of the same challenges as docker/containers. Our cloud-first strategy means that we should probably put greater emphasis on how we run our services in containers and less on how they are deployed on prem
 Snyk,Trial,Tools,TRUE,Container images are currently scanned for library-vulnerabilites using Snyk
 Docker,Adopt,Tools,TRUE,Our preferred container technology. All services should produce images as part of their build workflow
-Java17,Adopt,languages-and-frameworks,TRUE,We are currently in the process of migrating to this
-Go,Trial,languages-and-frameworks,TRUE,TBD
-Terraform,Adopt,languages-and-frameworks,TRUE,TBD
+Java17,Adopt,languages-and-frameworks,TRUE,We are currently in the process of migrating to this. Any new services should be using this from the get-go
+Go,Trial,languages-and-frameworks,TRUE,This is being tested by the CDE-team and currently powers the backend for iac.admin
+Terraform,Adopt,languages-and-frameworks,TRUE,This is our format for IAC. It is the most popular offering in this segment
 Java8,Hold,languages-and-frameworks,TRUE,"Any new services/libraries/repos should not use this, though we have not taken the plunge for bmp.bmp yet"
-React,Adopt,languages-and-frameworks,TRUE,Our primary front-end framework
+React,Adopt,languages-and-frameworks,TRUE,Our primary front-end framework. Recommended as the front-end backbone for all services
 Spring,Adopt,languages-and-frameworks,TRUE,"New services should be based on spring-boot. We are aware that the framework comes with a fair bit of overhead in terms of complexity and weight of JAR-files, but we feel that the gains in terms of utility, push towards good code practices and possibility of unification/streamlining between services is well worth it"
 ag-grid,Adopt,languages-and-frameworks,TRUE,Front-end tables. Widely used in BMP. Due to license cost and complexity may not be suitable for small use-cases in other products/services
-Apollo-client,Adopt,languages-and-frameworks,TRUE,Front-end graphql client
+Apollo-client,Adopt,languages-and-frameworks,TRUE,Front-end graphql client. Included here as an indication that graphql is our chosen protocol for frontend-backend communications
 JUL,Adopt,languages-and-frameworks,TRUE,BMP uses JUL for logging. Other services use JUL over SLF4J
