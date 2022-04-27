@@ -12,7 +12,7 @@ https://www.thoughtworks.com/radar
 
 https://www.thoughtworks.com/radar/faq-and-more
 
-## Corporater-specific clarifications and specifications
+## Corporater-specific changes and clarifications
 
 ### Quadrants
 
@@ -35,4 +35,10 @@ The normal starting point for a new entity. Something that we want to consider f
 #### Hold
 
 Blips in Hold represent something that we want to minimize the use of. This does not mean all associated code should be immediately deleted, rather that new projects should consider going in a different direction and existing code should be a candidate for upgrade/refactoring if touched
+
+## Participation
+
+Team-leads and other interested parties will be invited to quarterly official reviews of the radar
+
+All Corporater Dev employees/consultants should feel free to add a pull request if they feel that something is missing, misplaced or superfluous. The tech-lead will be most grateful if they also drop him a line on Teams as he may not be checking in on this repo daily
 
