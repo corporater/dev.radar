@@ -37,4 +37,5 @@ Spring,Adopt,languages-and-frameworks,TRUE,"New services should be based on spri
 ag-grid,Adopt,languages-and-frameworks,TRUE,Front-end tables. Widely used in BMP. Due to license cost and complexity may not be suitable for small use-cases in other products/services
 Apollo-client,Adopt,languages-and-frameworks,TRUE,Front-end graphql client. Included here as an indication that graphql is our chosen protocol for frontend-backend communications
 JUL,Adopt,languages-and-frameworks,TRUE,BMP uses JUL for logging. Other services use JUL over SLF4J
+Micro frontends,Trial,Techniques,TRUE,An architectural style where independently deliverable frontend applications are composed into a greater whole. We are trialling it as a way to split UI development across multiple teams using different technologies.
 ESLint,Adopt,Tools,TRUE,ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript and TypeScript code. It has become a de facto standard, utilizing rich toolset and first class IDEs support.
