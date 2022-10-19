@@ -11,13 +11,13 @@ CircleCI,Adopt,Platforms,TRUE,Our current CI/CD provider: https://app.circleci.c
 GitHub,Adopt,Platforms,TRUE,All our code lives here: https://github.com/corporater
 GitHub Actions,Assess,Platforms,TRUE,"Most of our automation needs are currently covered by CircleCI, but we see that GitHub Actions has good traction and might provide a good alternative for some use-cases. Killer use-case(s) and a strategy for dealing with the complexity/fragmentation that may arise from splitting efforts between GA and CircleCI needed!"
 DockerHub,Assess,Platforms,TRUE,"We are currently using DockerHub as our main container repository, however, there might be benefits from switching to AWS ECR, this is currently being investigated"
-AWS ECR,Trial,Platforms,TRUE,Continuous builds are pushed here as it is easier to integrate with our IAC efforts
+AWS ECR,Adopt,Platforms,TRUE,Continuous builds are pushed here as it is easier to integrate with our IAC efforts
 VeraCode,Adopt,Platforms,TRUE,"We want BMP to have a VeraCode stamp of approval for security. This certificate is important for many clients. All builds are uploaded to VeraCode and subjected to static scan, we also get manual penetration tests"
 AWS S3,Adopt,Platforms,TRUE,"Build artifacts (installers, tar'ed images) are published/stored here. We should consider if we can make this replace ShareFile alltogether"
 JFrog,Adopt,Platforms,TRUE,Package repository. Intermediary artifacts are uploaded here and used during build process. https://corporater.jfrog.io/ui/packages
 Camunda,Adopt,Platforms,TRUE,"The engine that powers our process management offering. Currently embedded in the BMP VM, but a prime candidate for deployment as a separate service"
 Prometheus,Adopt,Tools,TRUE,"Exposes metrics from BMP as a standard REST endpoint. Other services should use this as well, though the usage-scope is not defined and is left up to each team"
-Grafana,Trial,Tools,TRUE,"Visualize metrics as dashboards. Used by Saas/Service&Support. They have constructed a ""standard"" dashboard for BMP, but Grafana itself is highly configurable"
+Grafana,Adopt,Tools,TRUE,"Visualize metrics as dashboards. Used by Saas/Service&Support. They have constructed a ""standard"" dashboard for BMP, but Grafana itself is highly configurable"
 Figma,Adopt,Tools,TRUE,Chosen as our main tool for wireframing/prototyping and shared whiteboard
 IntelliJ 2021,Adopt,Tools,TRUE,"Still being widely used, but we would suggest upgrading to 2022"
 Visual Studio Code,Adopt,Tools,TRUE,TBD
@@ -40,3 +40,6 @@ JUL,Adopt,languages-and-frameworks,TRUE,BMP uses JUL for logging. Other services
 Micro frontends,Trial,Techniques,TRUE,An architectural style where independently deliverable frontend applications are composed into a greater whole. We are trialling it as a way to split UI development across multiple teams using different technologies.
 ESLint,Adopt,Tools,TRUE,ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript and TypeScript code. It has become a de facto standard, utilizing rich toolset and first class IDEs support.
 Prettier,Adopt,Tools,TRUE,Prettier is an opinionated code formatter with support for multiple languages. It has a reasonable default settings and ensures consistent coding style.
+AWS DynamoDB,Trial,Platform,TRUE,"Fast, flexible NoSQL database service for single-digit millisecond performance at any scale. Currently used in the IAC Admin project.",
+AWS ECS,Trial,Platform,TRUE,"Amazon ECS is a fully managed container orchestration service that makes it easy for you to deploy, manage, and scale containerized applications. Currently being used by the IAC Admin project.",
+Caddy,Trial,Tools,TRUE,"Caddy is a powerful, extensible platform to serve sites, services, and apps, written in Go. We use Caddy as a reverse proxy. Currently in use as part of the IAC Admin project, but also for local development where TLS and routing to multiple services are required. ",
