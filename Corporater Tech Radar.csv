@@ -20,6 +20,7 @@ Prometheus,Adopt,Tools,FALSE,"Exposes metrics from BMP as a standard REST endpoi
 Grafana,Adopt,Tools,FALSE,"Visualize metrics as dashboards. Used by Saas/Service&Support. They have constructed a ""standard"" dashboard for BMP, but Grafana itself is highly configurable",,,,
 Grafana Tempo,Trial,Tools,TRUE,"Grafana Tempo is a high volume, minimal dependency distributed tracing backend.",,,,
 Grafana Loki,Trial,Tools,TRUE,"Like Prometheus, but for logs.",,,,
+RabbitMq,Trial,Tools,TRUE,"RabbitMQ is a reliable and mature messaging and streaming broker",,,,
 Figma,Adopt,Tools,FALSE,Chosen as our main tool for wireframing/prototyping and shared whiteboard,,,,
 IntelliJ 2021,Hold,Tools,FALSE,"Still being widely used, but we would suggest upgrading to 2022",,,,
 Visual Studio Code,Adopt,Tools,FALSE,TBD,,,,
